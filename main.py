@@ -11,6 +11,10 @@ import os
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "API en funcionamiento"}
+    
 def derive_keys(media_key: bytes, media_type: str = 'audio'):
     info_str = f"WhatsApp {media_type.capitalize()} Keys".encode()
 

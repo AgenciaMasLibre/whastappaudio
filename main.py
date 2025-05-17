@@ -52,4 +52,4 @@ async def decrypt_opus(file: UploadFile, media_key_b64: str = Form(...)):
     with open(output_filename, "wb") as f:
         f.write(decrypted_data)
 
-    return FileResponse(output_filename, media_type="audio/ogg", filename="output.opus")
+    return FileResponse(output_filename, media_type="audio/ogg", filename="output.mp3")
